@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Főoldal | GutiGitár</title>
+
+    <meta property="og:description"
+        content="Egyénre szabott gitár, basszusgitár készítés! nézd meg a videót Neked csak elég kitalálni, hogy melyik gitár, basszusgitár modell legyen és minden paramétert saját ízlésedre szabhatsz!!! Nincsen kompromisszum, csak a legjobb anyagokból dolgozom, hogy később ne érjen csalódás! Rendelés menete! Mindenképpen írásban kell a hangszert megrendelni! Ha nem vagy benne biztos, hogy a zenédhez mely &nbsp;faanyagok … Home Read More »">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:wght@600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        #cookieWarning {
+            display: none;
+        }
+
+        @media screen and (max-width: 991px) {
+
+            html {
+                width: 100%;
+            }
+
+            .fa {
+                font-size: 2em;
+
+            }
+
+            .fa:hover {
+                text-decoration: none;
+            }
+
+            #socialmedia {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                filter: grayscale(100%);
+                margin-bottom: 10px;
+            }
+
+            #logokep {
+                height: 100%;
+            }
+
+            #logodiv {
+                display: flex;
+                width: 400px;
+                height: 20vw;
+                justify-content: center;
+                align-items: center;
+            }
+
+            body {
+                font-family: 'Raleway', sans-serif;
+                background-color: transparent;
+                height: 2000px;
+                width: 100%;
+                background-image: url(img/hatter1.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+
+            header {
+                background-color: white;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav {
+                height: auto;
+                width: 80%;
+                font-size: 1.2em;
+            }
+
+            #masodik {
+                display: flex;
+                justify-content: flex-start;
+                height: 850px;
+                color: white;
+                flex-direction: column;
+                padding-left: 50px;
+                padding-top: 100px;
+                padding-bottom: 100px;
+                font-size: 1.2em;
+            }
+
+            #harmadik {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                background-color: white;
+                height: auto;
+                min-height: 500px;
+                padding: 100px;
+                padding-right: 20px;
+            }
+
+            #negyedik {
+                background-color: rgba(22, 47, 75, 1);
+                height: 500px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                color: white;
+            }
+
+            #negyedik>img {
+                height: 600px;
+                margin-right: 50px;
+                margin-left: 10px;
+            }
+
+            #negyedik>div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                height: 300px;
+            }
+
+            #elsosection {
+                height: 300px;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                padding-top: 200px;
+                padding-left: 50px;
+                font-size: 1.5em;
+            }
+
+            #masodiksection {
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-left: 200px;
+                padding-right: 200px;
+                background-color: white;
+            }
+
+            #masodiksection>div {
+                margin: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .zenesz {
+                height: 300px;
+                width: 200px;
+                object-fit: cover;
+                margin: 0;
+            }
+
+            #harmadiksection {
+                height: auto;
+                display: flex;
+                justify-content: space-between;
+                background-color: white;
+                padding-bottom: 10px;
+                padding-left: 20px;
+            }
+
+            .tipusok {
+                margin: 50px;
+                width: 300px;
+                margin-left: 20px;
+            }
+
+            .tipusszam {
+                font-family: 'Alex Brush', cursive;
+                font-weight: 400;
+                font-size: 5em;
+                padding-top: 20px;
+            }
+
+            #negyediksection {
+                height: auto;
+                background: grey;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #divider {
+                width: 700px;
+                margin-top: 40px;
+            }
+
+            #negyediksection>h4 {
+                font-size: 3em;
+                margin-top: 70px;
+                width: 700px;
+                text-align: center;
+            }
+
+            #otodiksection {
+                background-color: lightgray;
+                height: 600px;
+                display: flex;
+                justify-content: center;
+                padding: 50px;
+                padding-left: 50px;
+            }
+
+            #osszecsuk {
+                width: 400px;
+                margin-left: 10px;
+                margin-right: 150px;
+                height: 500px;
+            }
+
+            #lespaul {
+                height: 500px;
+                border: 5px solid rgba(22, 47, 75, 1);
+            }
+
+            #options {
+                background-color: gray;
+                font-size: 3em;
+                color: white;
+                height: 150px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #accordionExample {
+                height: 500px;
+                padding-bottom: 40px;
+                background-color: gray;
+            }
+
+            #hatodiksection {
+                height: 600px;
+                background-image: url(img/footer.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: white;
+                justify-content: center;
+                text-align: center;
+            }
+
+            #hatodiksection>h5 {
+                font-size: 4em;
+            }
+
+            #hatodiksection>div {
+                font-size: 3em;
+            }
+
+            #hatodiksection>p {
+                font-size: 2em;
+            }
+
+            footer {
+                height: auto;
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                background-color: black;
+                align-items: center;
+                font-size: 1.3em;
+                color: white;
+                padding: 20px;
+            }
+
+            #footermenu {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 60%;
+                list-style-type: none;
+                color: white;
+                font-size: 1.2em;
+            }
+
+            .footer:hover {
+                color: white;
+                text-decoration: none;
+            }
+
+            #divider2 {
+                width: 40%;
+                margin: 50px;
+            }
+
+            #cookieWarning {
+                display: none;
+            }
+        }
+
+
+        @media screen and (min-width: 992px) {
+            html {
+                overflow-x: hidden;
+            }
+
+            .fa {
+                font-size: 2em;
+            }
+
+            .fa:hover {
+                text-decoration: none;
+            }
+
+            #socialmedia {
+                width: 30%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                filter: grayscale(100%);
+            }
+
+            #logokep {
+                height: 90%;
+            }
+
+            #logodiv {
+                display: flex;
+                width: 400px;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            body {
+                font-family: 'Raleway', sans-serif;
+                background-color: transparent;
+                height: 2000px;
+                background-image: url(img/hatter1.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                width: 100%;
+            }
+
+            header {
+                background-color: white;
+                height: 120px;
+                display: flex;
+                flex-direction: row;
+            }
+
+            nav {
+                height: auto;
+                width: 80%;
+                font-size: 1.2em;
+            }
+
+            #masodik {
+                display: flex;
+                justify-content: center;
+                height: 850px;
+                color: white;
+                flex-direction: column;
+                padding-left: 300px;
+                padding-top: 350px;
+                padding-bottom: 100px;
+                font-size: 1.2em;
+            }
+
+            #harmadik {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                background-color: white;
+                height: 500px;
+                padding: 100px;
+                padding-right: 100px;
+            }
+
+            #negyedik {
+                background-color: rgba(22, 47, 75, 1);
+                height: 500px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                padding-left: 300px;
+                padding-right: 200px;
+                color: white;
+            }
+
+            #negyedik>img {
+                height: 600px;
+                margin-right: 150px;
+            }
+
+            #negyedik>div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                height: 300px;
+            }
+
+            #elsosection {
+                height: 300px;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                padding-top: 200px;
+                font-size: 1.5em;
+            }
+
+            #masodiksection {
+                width: 100%;
+                height: 500px;
+                display: flex;
+                justify-content: space-around;
+                padding-left: 200px;
+                padding-right: 200px;
+                background-color: white;
+            }
+
+            #masodiksection>div {
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .zenesz {
+                height: 300px;
+                width: 200px;
+                object-fit: cover;
+                margin: 30px;
+            }
+
+            #harmadiksection {
+                height: 250px;
+                display: flex;
+                justify-content: center;
+                background-color: white;
+                padding-bottom: 50px;
+                padding-left: 50px;
+            }
+
+            .tipusok {
+                margin: 50px;
+                width: 300px;
+                margin-left: 20px;
+            }
+
+            .tipusszam {
+                font-family: 'Alex Brush', cursive;
+                font-weight: 400;
+                font-size: 5em;
+                padding-top: 20px;
+            }
+
+            #negyediksection {
+                height: auto;
+                background: grey;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #divider {
+                width: 700px;
+                margin-top: 40px;
+            }
+
+            #negyediksection>h4 {
+                font-size: 3em;
+                margin-top: 70px;
+                width: 700px;
+                text-align: center;
+            }
+
+            #otodiksection {
+                background-color: lightgray;
+                height: 600px;
+                display: flex;
+                justify-content: flex-start;
+                padding: 50px;
+                padding-left: 0.3vw;
+            }
+
+            #osszecsuk {
+                width: 400px;
+                margin-left: 150px;
+                margin-right: 150px;
+                height: 500px;
+            }
+
+            #lespaul {
+                height: 500px;
+                border: 5px solid rgba(22, 47, 75, 1);
+            }
+
+            #options {
+                background-color: gray;
+                font-size: 3em;
+                color: white;
+                height: 150px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #accordionExample {
+                height: 500px;
+                padding-bottom: 40px;
+                background-color: gray;
+            }
+
+            #hatodiksection {
+                height: 600px;
+                background-image: url(img/footer.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: white;
+                justify-content: center;
+                text-align: center;
+            }
+
+            #hatodiksection>h5 {
+                font-size: 4em;
+            }
+
+            #hatodiksection>div {
+                font-size: 3em;
+            }
+
+            #hatodiksection>p {
+                font-size: 2em;
+            }
+
+            footer {
+                height: 100px;
+                display: flex;
+                justify-content: space-around;
+                background-color: black;
+                align-items: center;
+                font-size: 1.3em;
+                color: white;
+            }
+
+            #footermenu {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                width: 60%;
+                list-style-type: none;
+                color: white;
+                font-size: 1.2em;
+            }
+
+            .footer:hover {
+                color: white;
+                text-decoration: none;
+            }
+
+            #divider2 {
+                width: 40%;
+                margin: 50px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="cookieWarning" class="fixed-bottom p-4">
+        <div class="bg-dark text-white w-100 mw-100" role="alert" data-autohide="false">
+            <div class="p-4 d-flex flex-column">
+                <h4>Figyelmeztetés!</h4>
+                <br>
+                <p>
+                    Ez a weboldal sütiket használ, melyek lehetővé teszik az működés optimalizását és személyre
+                    szabását. Az oldal használatával automatikusan beleegyezik, hogy sütiket használjunk.
+                </p>
+                <div class="ml-auto">
+                    <button type="button" class="btn btn-outline-light mr-3" id="btnDeny">
+                        Elutasít
+                    </button>
+                    <button type="button" class="btn btn-light" id="dismissCookie">
+                        Elfogad
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <a href="index.html">
+            <div id="logodiv"><img id="logokep" src="img/gutigitarlogo.PNG" alt=""></div>
+        </a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-block-flex align-items-centeralign-items-center"
+                id="navbarSupportedContent">
+                <ul style="width: 100%" class="navbar-nav mr-auto d-flex justify-content-around align-items-center">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Főoldal<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="munkaim.html">Munkáim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gitarok.html">Gitárok</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kapcsolat.html">Kapcsolat</a>
+                    </li>
+
+                </ul>
+                <div id="socialmedia" class="d-flex justify-content-between">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="masodik">
+            <h1 style="margin-bottom: 100px;">Egyénre szabott akusztikus és elektromos gitár készítés!</h1>
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/0l0cbazB1DI">
+            </iframe>
+        </div>
+        <div id="harmadik">
+            <i style="font-size: 1.6em; width: 70%">Neked csak elég kitalálni, hogy melyik gitár, basszusgitár modell
+                legyen és minden paramétert saját ízlésedre szabhatsz!!!</i>
+            <h1 style="width: 70%">Nincsen kompromisszum, csak a legjobb anyagokból dolgozom, hogy később ne érjen
+                csalódás!</h1>
+        </div>
+        <div id="negyedik">
+            <img src="img/taylor1.jpg" alt="">
+            <div>
+                <h1>Rendelés menete!</h1>
+                <p>Mindenképpen írásban kell a hangszert megrendelni! Ha nem vagy benne biztos, hogy a zenédhez mely
+                    faanyagok jók, akkor van lehetőség személyes konzultációra is!</p>
+                <a class="btn btn-outline-light kapcsolat" style="width: 100px" href="kapcsolat.html">Kapcsolat</a>
+            </div>
+        </div>
+        <section id="elsosection">
+            <h1>
+                Zenészek, akik a Guti Gitár hangszereit használják
+            </h1>
+        </section>
+        <section id="masodiksection">
+            <div>
+                <img class="zenesz" src="img/zeneszek/slash.jpg" alt="">
+                <div>Slash (Guns n' Roses)</div>
+            </div>
+            <div>
+                <div>Angus Young (AD/DC)</div>
+                <img class="zenesz" src="img/zeneszek/angus.jpg" alt="">
+            </div>
+            <div>
+                <img class="zenesz" src="img/zeneszek/bb.jpg" alt="">
+                <div>BB. King</div>
+            </div>
+            <div>
+                <div>Tátrai Tibusz (Tátrai Blues Band)</div>
+                <img class="zenesz" src="img/zeneszek/tibusz.jpg" alt="">
+            </div>
+        </section>
+        <section id="harmadiksection">
+            <h3 class="tipusszam">1</h3>
+            <div class="tipusok">
+                <h3 style="margin-bottom: 20px; font-family: 'Playfair Display', serif;">Headless</h3>
+                <p>Fejnélküli gitár, basszusgitár, aminek az előnye, hogy nem lesz fej nehéz! Főleg a basszusgitároknál
+                    jelent nagy előnyt</p>
+            </div>
+            <h3 class="tipusszam">2</h3>
+            <div class="tipusok">
+                <h3 style="margin-bottom: 20px; font-family: 'Playfair Display', serif;">Fanned Frets</h3>
+                <p>Változó menzúrás gitár, basszusgitár. A lehangolt zenékben jelent nagy előnyt, mert a húrok
+                    feszessége kényelmes lesz!</p>
+            </div>
+            <h3 class="tipusszam">3</h3>
+            <div class="tipusok">
+                <h3 style="margin-bottom: 20px; font-family: 'Playfair Display', serif;">Fretless</h3>
+                <p>Bund nélküli gitárt, basszusgitárt jelent</p>
+            </div>
+        </section>
+        <section id="negyediksection">
+
+            <img id="divider" src="img/divider.png" alt="">
+            <h4>Találd meg a hozzád és a zenédhez legjobban illő hangszert a GutiGitárnál</h4>
+            <svg style="width: 100%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"
+                preserveAspectRatio="none">
+
+                <path class="elementor-shape-fill" fill="lightgray" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
+	c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4
+	c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z" transform="translate(0, 100) scale(1, -1)"></path>
+            </svg>
+
+        </section>
+        <section id="otodiksection">
+            <div id=osszecsuk>
+
+                <div class="accordion" id="accordionExample">
+                    <div id="options">
+                        <p>Opciók</p>
+                    </div>
+                    <div class="card">
+
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Fényezés
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Csak a képzeleted szabhat határt! Nagyon sok féle technikával készülnek a fényezések!
+                                Lehet pácolt, csillámos. Fényes vagy selyem.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    Bund
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Acél vagy nikkel? Ha nem tudsz dönteni, akkor mindenképpen keressél meg e-mailben
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    Hardver
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Gotoh, Schaller, Hipshot, T4k, Babicz! Ezek a márkák amikkel dolgozom!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                                    aria-controls="collapseFour">
+                                    Hangszedő
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Megkeressük a zenédhez legjobban passzoló szettet!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img id="lespaul" src="img/lespaul.jpg" alt="">
+
+        </section>
+        <section id="hatodiksection">
+            <div>Kérj ajánlatot még ma!</div>
+            <div><img id="divider2" src="img/divider2.png" alt=""></div>
+            <h5>Ingyenes árajánlat!</h5>
+            <p>Írd meg az elképzelésed, és a lehető leghamarabb megírom az árajánlatot</p>
+            <a class="btn btn-outline-light kapcsolat" style="width: 100px" href="kapcsolat.html">Kapcsolat</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div>Copyright &copy; 2021 GutiGitár</div>
+        <ul id="footermenu">
+            <li>
+                <a class="footer" href="index.html">Főoldal</a>
+            </li>
+            <li>
+                <a class="footer" href="munkaim.html">Munkáim</a>
+            </li>
+            <li>
+                <a class="footer" href="gitarok.html">Gitárok</a>
+            </li>
+            <li>
+                <a class="footer" href="blog.html">Blog</a>
+            </li>
+            <li>
+                <a class="footer" href="kapcsolat.html">Kapcsolat</a>
+            </li>
+        </ul>
+
+    </footer>
+
+    <script>
+        if (sessionStorage.getItem("cookieDismissed") == null) {
+            document.getElementById("cookieWarning").style.display = "block";
+        }
+
+        let gomb = document.getElementById("dismissCookie");
+        gomb.addEventListener("click", function () {
+
+            document.getElementById("cookieWarning").style.display = "none";
+            sessionStorage.setItem("cookieDismissed", true);
+        })
+
+        let gomb2 = document.getElementById("btnDeny");
+        gomb2.addEventListener("click", function () {
+
+            document.getElementById("cookieWarning").style.display = "none";
+            sessionStorage.setItem("cookieDismissed", true);
+        })
+    </script>
+
+</body>
+
+</html>

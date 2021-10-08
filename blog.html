@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog | GutiGitár</title>
+
+    <meta property="og:description"
+        content="Egyénre szabott gitár, basszusgitár készítés! nézd meg a videót Neked csak elég kitalálni, hogy melyik gitár, basszusgitár modell legyen és minden paramétert saját ízlésedre szabhatsz!!! Nincsen kompromisszum, csak a legjobb anyagokból dolgozom, hogy később ne érjen csalódás! Rendelés menete! Mindenképpen írásban kell a hangszert megrendelni! Ha nem vagy benne biztos, hogy a zenédhez mely &nbsp;faanyagok … Home Read More »">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:wght@600&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        #cookieWarning {
+            display: none;
+        }
+
+        @media screen and (max-width: 991px) {
+            html {
+                box-sizing: border-box;
+            }
+
+            *,
+            *:before,
+            *:after {
+                box-sizing: inherit;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            .preview {
+                width: 100%;
+            }
+
+            .row {
+                display: grid;
+                grid-template-columns: 200px 200px 200px;
+                grid-template-rows: 200px 200px 200px 200px;
+            }
+
+            .row>.col {
+                padding: 6px;
+            }
+
+            .col {
+                height: 100%;
+                width: 100%;
+            }
+
+            .kepek {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+
+            .kepek:hover {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                opacity: 1;
+                transition: 0.3s;
+            }
+
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                padding: 10px 62px 0px 62px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.90);
+            }
+
+            .modal-content {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: auto;
+                padding: 5px;
+                padding-top: 10px;
+                width: 70%;
+                height: 90%;
+            }
+
+            .slide {
+                display: none;
+                max-height: 83%;
+                padding-bottom: 10px;
+            }
+
+            .image-slide {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                margin-bottom: 5px;
+            }
+
+            .modal-preview {
+                width: 100%;
+            }
+
+            .dots {
+                max-height: 20%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                max-width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .dots>div {
+                width: 40px;
+                max-height: 100%;
+            }
+
+            thumb {
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            img.preview,
+            img.modal-preview {
+                opacity: 0.6;
+            }
+
+            img.active,
+            .preview:hover,
+            .modal-preview:hover {
+                opacity: 1;
+            }
+
+            img.hover-shadow {
+                transition: 0.3s;
+            }
+
+            .hover-shadow:hover {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            .close {
+                color: white;
+                position: absolute;
+                top: 10px;
+                right: 25px;
+                font-size: 35px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: #999;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            .previous,
+            .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -50px;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                -webkit-user-select: none;
+            }
+
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+
+            .previous:hover,
+            .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .fa {
+                font-size: 2em;
+            }
+
+            .fa:hover {
+                text-decoration: none;
+            }
+
+            #socialmedia {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                filter: grayscale(100%);
+                margin-bottom: 10px;
+            }
+
+            #logokep {
+                height: 100%;
+            }
+
+            #logodiv {
+                display: flex;
+                width: 400px;
+                height: 20vw;
+                justify-content: center;
+                align-items: center;
+            }
+
+            body {
+                font-family: 'Raleway', sans-serif;
+                height: auto;
+                background-color: white;
+            }
+
+            header {
+                background-color: white;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+
+            nav {
+                height: auto;
+                width: 80%;
+                font-size: 1.2em;
+            }
+
+            #elsosection {
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                align-items: center;
+
+            }
+
+            #terv1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                text-align: left;
+                width: 100%;
+                margin-right: 20px;
+            }
+
+            #terv2 {
+                width: 100%;
+            }
+
+            main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            h1 {
+                margin-bottom: 50px;
+            }
+
+            #masodiksection {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 60px;
+                align-items: center;
+                padding: 20px;
+            }
+
+            #grid1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 100%;
+                margin-right: 30px;
+                margin-left: 30px;
+                align-items: center;
+            }
+
+            #grid2 {
+                display: grid;
+                grid-template-columns: 130px 130px 130px 130px;
+                grid-template-rows: 130px 130px 130px 130px;
+                ;
+                grid-gap: 10px;
+                width: auto;
+            }
+
+            .katana {
+                vertical-align: middle;
+                width: 100%;
+            }
+
+            #harmadiksection {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-top: 80px;
+                width: 80%;
+                height: 850px;
+            }
+
+            iframe {
+                width: 100%;
+                height: 700px;
+                margin-bottom: 20px;
+            }
+
+
+            footer {
+                height: auto;
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                background-color: black;
+                align-items: center;
+                font-size: 1.3em;
+                color: white;
+                padding: 20px;
+            }
+
+            #footermenu {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 60%;
+                list-style-type: none;
+                color: white;
+                font-size: 1.2em;
+            }
+
+            .footer:hover {
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            html {
+                box-sizing: border-box;
+                overflow-x: hidden;
+            }
+
+            *,
+            *:before,
+            *:after {
+                box-sizing: inherit;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            .preview {
+                width: 100%;
+            }
+
+            .row {
+                display: grid;
+                grid-template-columns: 140px 140px 140px;
+                grid-template-rows: 140px 140px 140px 140px;
+                justify-content: space-between;
+            }
+
+            .row>.col {
+                padding: 6px;
+            }
+
+            .col {
+                height: 100%;
+                width: 100%;
+            }
+
+            .kepek {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+
+            .kepek:hover {
+
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                opacity: 1;
+                transition: 0.3s;
+            }
+
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                padding: 10px 62px 0px 62px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.90);
+            }
+
+            .modal-content {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: auto;
+                padding: 5px;
+                padding-top: 10px;
+                width: 70%;
+                height: 90%;
+            }
+
+            .slide {
+                display: none;
+                max-height: 83%;
+                padding-bottom: 10px;
+            }
+
+            .image-slide {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                margin-bottom: 5px;
+            }
+
+            .modal-preview {
+                width: 100%;
+            }
+
+            .dots {
+                max-height: 20%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                max-width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .dots>div {
+                width: 40px;
+                max-height: 100%;
+            }
+
+            thumb {
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            img.active,
+            .preview:hover,
+            .modal-preview:hover {
+                opacity: 1;
+            }
+
+            img.hover-shadow {
+                transition: 0.3s;
+            }
+
+            .hover-shadow:hover {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            .close {
+                color: white;
+                position: absolute;
+                top: 10px;
+                right: 25px;
+                font-size: 35px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: #999;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            .previous,
+            .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -50px;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                -webkit-user-select: none;
+            }
+
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+
+            .previous:hover,
+            .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .fa {
+                font-size: 2em;
+            }
+
+            .fa:hover {
+                text-decoration: none;
+            }
+
+            #socialmedia {
+                width: 30%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                filter: grayscale(100%);
+            }
+
+            #logokep {
+                height: 90%;
+            }
+
+            #logodiv {
+                display: flex;
+                width: 400px;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            body {
+                font-family: 'Raleway', sans-serif;
+                height: auto;
+                background-color: white;
+            }
+
+            header {
+                background-color: white;
+                height: 120px;
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 20px;
+            }
+
+            nav {
+                height: auto;
+                width: 80%;
+                font-size: 1.2em;
+            }
+
+            #elsosection {
+                display: flex;
+                flex-direction: row;
+                width: 950px;
+            }
+
+            #terv1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                text-align: left;
+                width: 50%;
+                margin-right: 20px;
+            }
+
+            #terv2 {
+                width: 50%;
+            }
+
+            main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            h1 {
+                margin-bottom: 50px;
+            }
+
+            #masodiksection {
+                display: flex;
+                flex-direction: row;
+                width: 950px;
+                margin-top: 60px;
+                justify-content: space-between;
+            }
+
+            #grid1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 50%;
+                margin-right: 20px;
+            }
+
+            #grid2 {
+                display: grid;
+                grid-template-columns: 130px 130px 130px;
+                grid-template-rows: 130px 130px 130px;
+                grid-gap: 10px;
+                width: auto;
+            }
+
+            .katana {
+                vertical-align: middle;
+                width: 100%;
+            }
+
+            #harmadiksection {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-top: 80px;
+                width: 950px;
+                height: 850px;
+            }
+
+            iframe {
+                width: 100%;
+                height: 700px;
+                margin-bottom: 20px;
+
+            }
+
+            footer {
+                height: auto;
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                background-color: black;
+                align-items: center;
+                font-size: 1.3em;
+                color: white;
+                padding: 20px;
+            }
+
+            #footermenu {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 60%;
+                list-style-type: none;
+                color: white;
+                font-size: 1.2em;
+            }
+
+            .footer:hover {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="cookieWarning" class="fixed-bottom p-4">
+        <div class="bg-dark text-white w-100 mw-100" role="alert" data-autohide="false">
+            <div class="p-4 d-flex flex-column">
+                <h4>Figyelmeztetés!</h4>
+                <br>
+                <p>
+                    Ez a weboldal sütiket használ, melyek lehetővé teszik az működés optimalizását és személyre
+                    szabását. Az oldal használatával automatikusan beleegyezik, hogy sütiket használjunk.
+                </p>
+                <div class="ml-auto">
+                    <button type="button" class="btn btn-outline-light mr-3" id="btnDeny">
+                        Elutasít
+                    </button>
+                    <button type="button" class="btn btn-light" id="dismissCookie">
+                        Elfogad
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <header>
+        <a href="index.html">
+            <div id="logodiv"><img id="logokep" src="img/gutigitarlogo.PNG" alt=""></div>
+        </a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-block-flex align-items-centeralign-items-center"
+                id="navbarSupportedContent">
+                <ul style="width: 100%" class="navbar-nav mr-auto d-flex justify-content-around align-items-center">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Főoldal<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="munkaim.html">Munkáim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gitarok.html">Gitárok</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kapcsolat.html">Kapcsolat</a>
+                    </li>
+
+                </ul>
+                <div id="socialmedia" class="d-flex justify-content-between">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Új modellt terveztem!</h1>
+        <section id="elsosection">
+
+            <div id="terv1">
+                <p>A test forma megegyezik, de az egyik a headless (fejnélküli) vonalat képviseli, a másikat pedig a
+                    megszokott klasszikus kivitelben terveztem! Mind a két modell üreges és tömör is lehet, ezt a
+                    megrendelő döntheti el! Az üregesnek az elkészítése bonyolultabb ezért drágább árkategóriát
+                    képvisel! </p>
+                <p>Budapest, 2021.04.25. </p>
+            </div>
+            <div id="terv2">
+                <img src="img/terv.png" alt="" class="w-100">
+            </div>
+
+        </section>
+        <section id="masodiksection">
+            <div id="grid1">
+                <p>Még meleg és ropogós, ma készültem el ezzel az egyedi basszusgitárral
+
+                </p>
+                <p>Milyen anyagokból is épül fel?
+
+                </p>
+                <p>Nyakát kőrisből készítettem, nagyon szépen viszi át a rezonanciát, és adja át az ében fogólapnak .
+                    Testét a hagyományokhoz híven égerből készítettem, ami megalapozza a mélyeket! Fényezés csak
+                    vékonyan, hogy a végső hangzást ne befolyásolja! Színe kérésre lett zöld, a fej is megkapta ugyanezt
+                    a fényezést.
+
+                </p>
+                <p>Nyaknál egy Kent Armstrong J hangszedő foglal helyet amit 2 állásban lehet kapcsolni. A hídnál egy
+                    WoodHead található ami 3 állásban kapcsolható. 2 volumen és egy Jack aljzat kapott még helyet a
+                    fekete fém borításon!
+
+                </p>
+                <p>Budapest, 2021.04.08.
+
+                </p>
+
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <img src="img/blog/b1.png" onclick="openLightbox();toSlide(1)" class="kepek hover-shadow preview"
+                        alt="" />
+                </div>
+                <div class="col">
+                    <img src="img/blog/b2.png" onclick="openLightbox();toSlide(2)" class="kepek hover-shadow preview"
+                        alt="" />
+                </div>
+                <div class="col">
+                    <img src="img/blog/b3.png" onclick="openLightbox();toSlide(3)" class="kepek hover-shadow preview"
+                        alt="" />
+                </div>
+                <div class="col">
+                    <img src="img/blog/b4.png" onclick="openLightbox();toSlide(4)" class="kepek hover-shadow preview"
+                        alt="" />
+                </div>
+                <div class="col">
+                    <img src="img/blog/b5.png" onclick="openLightbox();toSlide(5)" class="kepek hover-shadow preview"
+                        alt="" />
+                </div>
+                <div class="col">
+                    <img src="img/blog/b6.png" onclick="openLightbox();toSlide(6)" class="kepek hover-shadow preview"
+                        alt="" />
+                </div>
+                <div class="col">
+                    <img src="img/blog/b7.png" onclick="openLightbox();toSlide(7)" class="kepek hover-shadow preview"
+                        alt="" />
+                </div>
+                <div class="col">
+                    <img src="img/blog/b8.png" onclick="openLightbox();toSlide(8)" class="kepek hover-shadow preview"
+                        alt="" />
+                </div>
+                <div class="col">
+                    <img src="img/blog/b9.png" onclick="openLightbox();toSlide(9)" class="kepek hover-shadow preview"
+                        alt="" />
+                </div>
+                <div class="col">
+                    <img src="img/blog/b10.png" onclick="openLightbox();toSlide(10)" class="kepek hover-shadow preview"
+                        alt="" />
+                </div>
+            </div>
+
+            <!-- This is your lightbox, it is contained in a modal. Here you provide all the images,
+     controls, and another set of preview images as the dots. Dots show your user which
+     image is currently active. Note that you use entities (e.g. &times;), more info on
+     them at the bottom. -->
+
+            <div id="Lightbox" class="modal">
+                <span class="close pointer" onclick="closeLightbox()">&times;</span>
+                <div class="modal-content">
+                    <div class="slide">
+                        <img src="img/blog/b1.png" class="image-slide" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/blog/b2.png" class="image-slide" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/blog/b3.png" class="image-slide" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/blog/b4.png" class="image-slide" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/blog/b5.png" class="image-slide" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/blog/b6.png" class="image-slide" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/blog/b7.png" class="image-slide" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/blog/b8.png" class="image-slide" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/blog/b9.png" class="image-slide" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/blog/b10.png" class="image-slide" alt="" />
+                    </div>
+
+                    <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+                    <div class="dots">
+                        <div class="col">
+                            <img src="img/blog/b1.png" class="modal-preview hover-shadow" onclick="toSlide(1)" alt="" />
+                        </div>
+                        <div class="col">
+                            <img src="img/blog/b2.png" class="modal-preview hover-shadow" onclick="toSlide(2)" alt="" />
+                        </div>
+                        <div class="col">
+                            <img src="img/blog/b3.png" class="modal-preview hover-shadow" onclick="toSlide(3)" alt="" />
+                        </div>
+                        <div class="col">
+                            <img src="img/blog/b4.png" class="modal-preview hover-shadow" onclick="toSlide(4)" alt="" />
+                        </div>
+                        <div class="col">
+                            <img src="img/blog/b5.png" class="modal-preview hover-shadow" onclick="toSlide(5)" alt="" />
+                        </div>
+                        <div class="col">
+                            <img src="img/blog/b6.png" class="modal-preview hover-shadow" onclick="toSlide(6)" alt="" />
+                        </div>
+                        <div class="col">
+                            <img src="img/blog/b7.png" class="modal-preview hover-shadow" onclick="toSlide(7)" alt="" />
+                        </div>
+                        <div class="col">
+                            <img src="img/blog/b8.png" class="modal-preview hover-shadow" onclick="toSlide(8)" alt="" />
+                        </div>
+                        <div class="col">
+                            <img src="img/blog/b9.png" class="modal-preview hover-shadow" onclick="toSlide(9)" alt="" />
+                        </div>
+                        <div class="col">
+                            <img src="img/blog/b10.png" class="modal-preview hover-shadow" onclick="toSlide(10)"
+                                alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <section id="harmadiksection">
+            <h2>Katana 6 test készül!</h2>
+            <p>Végigkövetheted, hogy hogyan készül a Katana 6 gitár teste!</p>
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/5Wz3ucIDzNs">
+            </iframe>
+
+        </section>
+
+
+        <script>
+            let slideIndex = 1;
+            showSlide(slideIndex);
+
+            function openLightbox() {
+                document.getElementById('Lightbox').style.display = 'block';
+            }
+
+            function closeLightbox() {
+                document.getElementById('Lightbox').style.display = 'none';
+            };
+
+
+            function changeSlide(n) {
+                showSlide(slideIndex += n);
+            };
+
+            function toSlide(n) {
+                showSlide(slideIndex = n);
+            };
+
+            function showSlide(n) {
+                const slides = document.getElementsByClassName('slide');
+                let modalPreviews = document.getElementsByClassName('modal-preview');
+
+                if (n > slides.length) {
+                    slideIndex = 1;
+                };
+
+                if (n < 1) {
+                    slideIndex = slides.length;
+                };
+
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                };
+
+                for (let i = 0; i < modalPreviews.length; i++) {
+                    modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
+                };
+
+                slides[slideIndex - 1].style.display = 'block';
+                modalPreviews[slideIndex - 1].className += ' active';
+            };
+            var modal = document.querySelector('.modal')
+
+            window.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    modal.style.display = 'none'
+                }
+            });
+        </script>
+
+    </main>
+
+    <footer>
+        <div>Copyright &copy; 2021 GutiGitár</div>
+        <ul id="footermenu">
+            <li>
+                <a class="footer" href="index.html">Főoldal</a>
+            </li>
+            <li>
+                <a class="footer" href="munkaim.html">Munkáim</a>
+            </li>
+            <li>
+                <a class="footer" href="gitarok.html">Gitárok</a>
+            </li>
+            <li>
+                <a class="footer" href="blog.html">Blog</a>
+            </li>
+            <li>
+                <a class="footer" href="kapcsolat.html">Kapcsolat</a>
+            </li>
+        </ul>
+    </footer>
+
+    <script>
+        if (sessionStorage.getItem("cookieDismissed") == null) {
+            document.getElementById("cookieWarning").style.display = "block";
+        }
+
+        let gomb = document.getElementById("dismissCookie");
+        gomb.addEventListener("click", function () {
+            document.getElementById("cookieWarning").style.display = "none";
+            sessionStorage.setItem("cookieDismissed", true);
+
+        })
+        let gomb2 = document.getElementById("btnDeny");
+        gomb2.addEventListener("click", function () {
+            document.getElementById("cookieWarning").style.display = "none";
+            sessionStorage.setItem("cookieDismissed", true);
+
+        })
+    </script>
+
+</body>
+
+</html>
