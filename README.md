@@ -6,4 +6,4 @@ Ezen eszközök mindegyikét alkalmazva készítettem el ezen vizsgamunkát.
 
 Telepítési útmutató
 1. Töltsük le, majd csomagoljuk ki a .zip fájlt.
-2. Az index.html-t megnyitva érhetjük el a főoldalt, melyről már el tudunk navigálni az összes több aloldalra.
+2. Az index.html-t megnyitva érhetjük el a főoldalt, melyről már el tudunk navigálni az többi aloldalra.
